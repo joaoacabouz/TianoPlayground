@@ -1,0 +1,34 @@
+## @file
+#  PlaygroundPkg Package Declaration File.
+#
+#  Copyright (c) 2026, Playground Contributors. All rights reserved.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  DEC_SPECIFICATION              = 0x0001001B
+  PACKAGE_NAME                   = PlaygroundPkg
+  PACKAGE_GUID                   = 8b8ed67a-4964-4c98-857f-7136a880aa26
+  PACKAGE_VERSION                = 0.1
+
+[Includes]
+  Include
+
+[LibraryClasses]
+  ##  @libraryclass  Provides screen output, formatting, and console UI functions.
+  ScreenLib|Include/Library/ScreenLib.h
+
+  ##  @libraryclass  Provides core utility functions for DXE drivers, including key input handling.
+  FunctionLib|Include/Library/FunctionLib.h
+
+  ##  @libraryclass  Provides functions for finding, reading, listing, and querying NVRAM variables.
+  NvramLib|Include/Library/NvramLib.h
+
+  ##  @libraryclass  Provides EFI partition file inspection and cryptographic SHA-256 validation.
+  EfiAnaliserLib|Include/Library/EfiAnaliserLib.h
+
+[Guids]
+  ## GUID for PlaygroundPkg NVRAM variables and configuration
+  gPlaygroundVariableGuid = { 0x4f123b7e, 0x51c2, 0x4d68, { 0x89, 0xb2, 0x3d, 0x8a, 0x6e, 0x1f, 0x47, 0x90 } }

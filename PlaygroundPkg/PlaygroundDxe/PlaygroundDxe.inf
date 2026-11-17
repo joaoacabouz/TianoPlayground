@@ -1,0 +1,49 @@
+## @file
+#  Component description file for Playground DXE Driver.
+#
+#  Copyright (c) 2026, Playground Contributors. All rights reserved.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x0001001A
+  BASE_NAME                      = PlaygroundDxe
+  FILE_GUID                      = 67f168e7-98e6-4bdd-82fa-1732db462727
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = PlaygroundDxeEntryPoint
+
+[Sources]
+  PlaygroundDxe.c
+  PlaygroundDxe.h
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  CryptoPkg/CryptoPkg.dec
+  PlaygroundPkg/PlaygroundPkg.dec
+
+[LibraryClasses]
+  UefiDriverEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UefiLib
+  DebugLib
+  MemoryAllocationLib
+  ScreenLib
+  FunctionLib
+  NvramLib
+  EfiAnaliserLib
+
+[Protocols]
+  gEfiSimpleFileSystemProtocolGuid
+
+[Guids]
+  gEfiFileInfoGuid
+  gEfiGlobalVariableGuid
+  gPlaygroundVariableGuid
+
+[Depex]
+  TRUE

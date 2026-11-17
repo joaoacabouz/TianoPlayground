@@ -1,0 +1,29 @@
+## @file
+#  Component description file for FunctionLib.
+#
+#  Copyright (c) 2026, Playground Contributors. All rights reserved.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x0001001A
+  BASE_NAME                      = FunctionLib
+  FILE_GUID                      = b6e84d12-1f4a-4318-8f81-5970c9eb723e
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = FunctionLib|DXE_DRIVER DXE_RUNTIME_DRIVER UEFI_APPLICATION UEFI_DRIVER
+
+[Sources]
+  FunctionLib.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  PlaygroundPkg/PlaygroundPkg.dec
+
+[LibraryClasses]
+  BaseLib
+  DebugLib
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib

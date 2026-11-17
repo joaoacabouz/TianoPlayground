@@ -1,0 +1,7 @@
+edk2/
+.agents/
+OVMF_VARS.qemu.fd
+OVMF-VARS.qemu.fd
+esp/
+debug.log
+__pycache__

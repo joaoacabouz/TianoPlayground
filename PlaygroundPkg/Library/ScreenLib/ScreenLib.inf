@@ -1,0 +1,29 @@
+## @file
+#  Component description file for ScreenLib.
+#
+#  Copyright (c) 2026, Playground Contributors. All rights reserved.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x0001001A
+  BASE_NAME                      = ScreenLib
+  FILE_GUID                      = d59a7a01-447a-4ecb-9d48-69ce8bc92d01
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = ScreenLib|DXE_DRIVER DXE_RUNTIME_DRIVER UEFI_APPLICATION UEFI_DRIVER
+
+[Sources]
+  ScreenLib.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  PlaygroundPkg/PlaygroundPkg.dec
+
+[LibraryClasses]
+  BaseLib
+  PrintLib
+  UefiLib
+  UefiBootServicesTableLib
